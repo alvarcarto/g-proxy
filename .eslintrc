@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "semi": ["error", "never"],
+    "no-console": "off",
+    "arrow-body-style": "off",
+    "function-paren-newline": ["error", "multiline"],
+    "object-curly-newline": ["error", {
+      "minProperties": 5,
+      "multiline": true,
+      "consistent": true
+    }],
+    "comma-dangle": ["error", {
+      "arrays": "only-multiline",
+      "objects": "only-multiline",
+      "imports": "only-multiline",
+      "exports": "only-multiline",
+      "functions": "ignore"
+    }]
+  }
+}

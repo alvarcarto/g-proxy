@@ -35,7 +35,10 @@ to be terminated.
     If you host your internal service at https://internal.company.com, you should use following settings:
 
     * **Authorized JavaScript origins:** `https://internal.company.com`
-    * **Authorized redirect URIs:** `https://internal.company.com/login/return` This handles the OAuth2 redirect from Google.
+    * **Authorized redirect URIs:** `https://internal.company.com/login/return` This handles the OAuth2 redirect from Google. This should be configured the same as CALLBACK_URL environment variable.
+
+    You might need to enable Google+ API for the Google project to make auth working.
+
 
 1. `npm i`
 1. `cp .env.sample .env` and fill the blanks

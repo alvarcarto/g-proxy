@@ -25,6 +25,10 @@
       "description": "Follow instructions in https://github.com/bitly/oauth2_proxy to create Google OAuth2 client id and secret",
       "required": true
     },
+    "CALLBACK_URL": {
+      "description": "Url where Google redirects users back to. If your service is hosted at internal.company.com. This should be https://internal.company.com/login/return",
+      "required": true
+    },
     "SESSION_SECRET": {
       "description": "Create a 64-character alfa-numeric secure random key for this",
       "required": true

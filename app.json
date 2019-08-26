@@ -1,0 +1,57 @@
+{
+  "name": "g-proxy",
+  "description": "Google authentication for internal services",
+  "keywords": [
+    "google",
+    "auth",
+    "proxy"
+  ],
+  "website": "https://github.com/alvarcarto/alvarcarto-g-proxy",
+  "repository": "https://github.com/alvarcarto/alvarcarto-g-proxy",
+  "env": {
+    "ORIGIN_BASE_URL": {
+      "description": "The full base url of the origin. For example https://my-api.company.com",
+      "required": true
+    },
+    "ORIGIN_KEY": {
+      "description": "Create a 64-character alfa-numeric secure random key for this. It's a shared secret between this proxy and origin.",
+      "required": true
+    },
+    "GOOGLE_CLIENT_ID": {
+      "description": "Follow instructions in https://github.com/bitly/oauth2_proxy to create Google OAuth2 client id and secret",
+      "required": true
+    },
+    "GOOGLE_CLIENT_SECRET": {
+      "description": "Follow instructions in https://github.com/bitly/oauth2_proxy to create Google OAuth2 client id and secret",
+      "required": true
+    },
+    "SESSION_SECRET": {
+      "description": "Create a 64-character alfa-numeric secure random key for this",
+      "required": true
+    },
+    "ALLOWED_EMAIL_DOMAIN": {
+      "description": "",
+      "required": true
+    },
+    "MAX_BODY_SIZE": {
+      "description": "Max limit what this express app will accept as body.",
+      "value": "50mb"
+    },
+    "LOG_LEVEL": {
+      "description": "How verbose logging is wanted. Winston levels are used: debug, info, warn, error",
+      "value": "info"
+    },
+    "NODE_ENV": {
+      "description": "Use 'production' in production environments",
+      "value": "production"
+    }
+  },
+  "addons": [
+    "papertrail"
+  ],
+  "buildpacks": [
+    {
+      "url": "http://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ]
+}

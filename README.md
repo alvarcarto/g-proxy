@@ -1,4 +1,6 @@
-# alvarcarto-g-proxy
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/alvarcarto/g-proxy)
+
+# g-proxy
 
 > Google authentication for internal services
 

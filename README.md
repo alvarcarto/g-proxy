@@ -7,7 +7,7 @@
 This proxy handles sessions and makes it easy to secure internal services
 behind a Google Authentication. It acts as a gatekeeper to make sure only authenticated users
 are allowed to make requests to the origin. All requests are proxied to the origin as is, except
-for `/login` and `/logout` paths.
+for `/login`, `/login/return` and `/logout` paths.
 
 ![](docs/gproxy.svg)
 
@@ -31,6 +31,12 @@ to be terminated.
 
 1. Install node environment
 1. Follow instructions in https://github.com/bitly/oauth2_proxy to create Google OAuth2 client id and secret
+
+    If you host your internal service at https://internal.company.com, you should use following settings:
+
+    * **Authorized JavaScript origins:** `https://internal.company.com`
+    * **Authorized redirect URIs:** `https://internal.company.com/login/return` This handles the OAuth2 redirect from Google.
+
 1. `npm i`
 1. `cp .env.sample .env` and fill the blanks
 1. `npm start`

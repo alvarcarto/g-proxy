@@ -12,6 +12,7 @@ const config = {
   ORIGIN_KEY: getRequiredEnv('ORIGIN_KEY', string),
   GOOGLE_CLIENT_ID: getRequiredEnv('GOOGLE_CLIENT_ID', string),
   GOOGLE_CLIENT_SECRET: getRequiredEnv('GOOGLE_CLIENT_SECRET', string),
+  CALLBACK_URL: getOptionalEnv('CALLBACK_URL', string),
   SESSION_SECRET: getRequiredEnv('SESSION_SECRET', string),
   ALLOWED_EMAIL_DOMAIN: getRequiredEnv('ALLOWED_EMAIL_DOMAIN', string),
 

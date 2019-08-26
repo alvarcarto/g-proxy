@@ -12,6 +12,7 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-json-validator-middleware": "^1.2.3",

@@ -61,9 +61,7 @@ function proxyRequest(req, res) {
 
   request(reqOpts)
     .on('error', (err) => {
-      if (err) {
-        handleUpstreamError(err, res)
-      }
+      handleUpstreamError(err, res)
     })
     .pipe(res)
 }

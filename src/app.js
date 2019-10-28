@@ -19,7 +19,7 @@ const strategy = new Strategy({
   callbackURL: config.CALLBACK_URL,
 }, (accessToken, refreshToken, profile, cb) => {
   const { displayName, emails, photos } = profile
-  const accountEmail = _.find(emails, e => e.type === 'account')
+  const accountEmail = _.find(emails, e => e.type && e.type.toLowerCase() === 'account')
   if (!accountEmail) {
     return cb(new Error(`Invalid emails returned: ${util.inspect(emails)}`))
   }
